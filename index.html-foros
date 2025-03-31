@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Gamer - Foros de Videojuegos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        h1, h2, h3 {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            color: white; /* Set all headings to white */
+        }
+        nav a {
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: rgb(255, 215, 0); /* Color dorado al pasar el ratón */
+        }
+        .bg-blue-500 {
+            background-color: rgb(0, 123, 255); /* Azul personalizado */
+        }
+        .bg-blue-600 {
+            background-color: rgb(0, 86, 179); /* Azul oscuro personalizado */
+        }
+        button {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: rgb(0, 86, 179); /* Azul oscuro al pasar el ratón */
+            transform: scale(1.05);
+        }
+        footer a {
+            color: rgb(255, 215, 0); /* Color dorado para los enlaces del pie de página */
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-900" x-data="{ mobileMenuOpen: false }">
+
+    <!-- Navigation -->
+    <nav class="bg-blue-600" style="background-color: #c72413; color: white;" p-4>
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold" style="color: white;">Portal Gamer</div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6">
+                <a href="http://127.0.0.1:5500/pagina_web/pag_web.html#noticias" class="hover:text-blue-200">Inicio</a>
+                <a href="http://127.0.0.1:5500/pagina_web/ultimas_noticias.html" class="hover:text-blue-200">Últimas Noticias</a>
+                <a href="http://127.0.0.1:5500/pagina_web/analisis_videojuegos.html" class="hover:text-blue-200">Análisis de Juegos</a>
+                <a href="http://127.0.0.1:5500/pagina_web/guias_y_trucos.html" class="hover:text-blue-200">Guías y Trucos</a>
+                <a href="http://127.0.0.1:5500/pagina_web/foros_videojuegos.html" class="hover:text-blue-200">Foros</a>
+                <a href="#contacto" class="hover:text-blue-200">Contacto</a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block hover:bg-blue-700 px-3 py-2">Inicio</a>
+                <a href="#noticias" class="block hover:bg-blue-700 px-3 py-2">Últimas Noticias</a>
+                <a href="#analisis" class="block hover:bg-blue-700 px-3 py-2">Análisis de Juegos</a>
+                <a href="#guias" class="block hover:bg-blue-700 px-3 py-2">Guías y Trucos</a>
+                <a href="#foros" class="block hover:bg-blue-700 px-3 py-2">Foros</a>
+                <a href="#contacto" class="block hover:bg-blue-700 px-3 py-2">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section id="inicio" class="bg-gray-800 text-white p-8 rounded-lg mb-8 text-center" style="background-color: #333333;">
+            <h1 class="text-4xl font-bold mb-4">Bienvenidos a Portal Gamer</h1>
+            <p class="text-xl mb-6">Tu comunidad definitiva para gamers de todas las edades</p>
+            <a href="#productos" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition">Ver Periféricos</a>
+        </section>
+
+        <!-- Foros Section -->
+        <section id="foros" class="bg-gray-300 p-6 rounded-lg shadow" style="background-color: #333333;">
+            <h2 class="text-2xl font-bold mb-4">Foros de Videojuegos</h2>
+            <div class="space-y-4">
+                <article>
+                    <h3 class="font-semibold">Discusión General</h3>
+                    <p style="color: white;">Comparte tus pensamientos sobre los últimos lanzamientos y tendencias.</p> <a href="https://vandal.elespanol.com/foro/1/general-juegos/" class="text-blue-500 hover:text-blue-700">Ir al Foro</a>
+                </article>
+                <article>
+                    <h3 class="font-semibold">Consejos y Estrategias</h3>
+                    <p style="color: white;">Intercambia estrategias y consejos con otros jugadores.</p>  <a href="https://hablamosdegamers.com/guias/" class="text-blue-500 hover:text-blue-700">Ir al Foro</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="mt-8 bg-gray-300 p-6 rounded-lg shadow" style="background-color: #333333;">
+            <h2 class="text-2xl font-bold mb-4">Contáctanos</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Nombre" class="w-full p-2 border rounded">
+                <input type="email" placeholder="Correo Electrónico" class="w-full p-2 border rounded">
+                <textarea placeholder="Tu Mensaje" class="w-full p-2 border rounded" rows="4"></textarea>
+<button class="bg-orange-400 text-white px-6 py-2 rounded hover:bg-orange-600">Enviar Mensaje</button>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white p-6 mt-8" style="background-color: #333333;">
+        <div class="container mx-auto grid md:grid-cols-3 gap-4">
+            <div>
+                <h3 class="font-bold mb-2">Portal Gamer</h3>
+                <p>Comunidad de videojuegos en México</p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Navegación</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Síguenos</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-blue-200">Facebook</a>
+                    <a href="#" class="hover:text-blue-200">Twitter</a>
+                    <a href="#" class="hover:text-blue-200">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p style="color: white;">&copy; 2024 Portal Gamer. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
