@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi de videojuegos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333333; /* Maintain background color */
+            color: white; /* Maintain text color */
+        }
+        h1, h2, h3 {
+            color: white; /* Set all headings to white */
+        }
+        footer a {
+            color: rgb(255, 215, 0); /* Maintain link color */
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        img {
+            width: 100%; /* Set image width to 100% of the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+        button {
+            background-color: rgb(255, 165, 0); /* Lighter orange for buttons */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgb(255, 140, 0); /* Darker orange on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-600" style="background-color: #c72413; color: white;" p-4>
+        <div class="container mx-auto flex justify-between items-center">
+           <p> <div class="text-2xl font-bold" style="color: white;">Portal Gamer</div></p>
+            <!-- Navigation links can be added here -->
+            <div class="hidden md:flex space-x-6">
+                <a href="http://127.0.0.1:5500/pagina_web/pag_web.html#noticias" class="hover:text-blue-200">Inicio</a>
+                <a href="http://127.0.0.1:5500/pagina_web/ultimas_noticias.html" class="hover:text-blue-200">Últimas Noticias</a>
+                <a href="http://127.0.0.1:5500/pagina_web/analisis_videojuegos.html" class="hover:text-blue-200">Análisis de Juegos</a>
+                <a href="http://127.0.0.1:5500/pagina_web/guias_y_trucos.html" class="hover:text-blue-200">Guías y Trucos</a>
+                <a href="http://127.0.0.1:5500/pagina_web/foros_videojuegos.html" class="hover:text-blue-200">Foros</a>
+                <a href="#contacto" class="hover:text-blue-200">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-4">Analisis de videojuegos</h1>
+        <section class="space-y-4">
+            <article>
+                <h2 class="font-semibold">Karma EI mundo oscuro</h2>
+                <img src="https://media.vandal.net/i/1280x720/3-2025/20253261719211_1.jpg.webp" alt="" class="mb-2">
+                <p> <a href="https://vandal.elespanol.com/analisis/pc/karma-el-mundo-oscuro/156598#p-13" class="text-blue-200">Leer más</a></p>
+            </article>
+            <article>
+                <h2 class="font-semibold">FragPunk</h2>
+                <img src="https://media.vandal.net/i/1280x720/3-2025/20253261715444_1.jpg.webp" alt="" class="mb-2">
+                <p><a href="https://vandal.elespanol.com/analisis/pc/fragpunk/171622#p-13" class="text-blue-200">Leer más</a></p>
+            </article>
+            <article>
+                <h2 class="font-semibold">Assasins Creed Shadows</h2>
+                <img src="https://media.vandal.net/i/1280x720/3-2025/20253171504912_1.jpg.webp" alt="Imagen de Noticia 3" class="mb-2">
+                <p><a href="https://vandal.elespanol.com/analisis/ps5/assassins-creed-shadows/126209#p-89" class="text-blue-200">Leer más</a></p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white p-6 mt-8" style="background-color: #333333;">
+        <div class="container mx-auto grid md:grid-cols-3 gap-4">
+            <div>
+                <h3 class="font-bold mb-2">Portal Gamer</h3>
+                <p>Comunidad de videojuegos en México</p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Navegación</h3>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/pagina_web/pag_web.html#noticias">Inicio</a></li>
+                    <li><a href="http://127.0.0.1:5500/pagina_web/ultimas_noticias.html">Noticias</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Síguenos</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-blue-200">Facebook</a>
+                    <a href="#" class="hover:text-blue-200">Twitter</a>
+                    <a href="#" class="hover:text-blue-200">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p style="color: white;">&copy; 2024 Portal Gamer. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
